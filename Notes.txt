@@ -1,0 +1,4 @@
+std::make_unique<T>(args...) 
+- slightly more efficient because it creates the object in one step instead of two (first allocating memory, then calling the constructor)
+- it ensures exception safety—if an exception occurs while constructing the object, there is no memory leak.
+- it automatically deletes the allocated object when it goes out of scope.
